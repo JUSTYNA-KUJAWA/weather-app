@@ -12,7 +12,7 @@ const [error, setError] = useState(false);
 const handleCityChange = useCallback((city) => {
   setError(false);
   setIsLoading(true);
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f669940d66e62986628e6c55f31c0b08=metric`)
+  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=f669940d66e62986628e6c55f31c0b08&units=metric`)
   .then((res) => {
     if (res.status === 200) {
       return res.json().then((data) => {
